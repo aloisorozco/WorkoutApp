@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\Documents\\VisualStudioCodeProjects\\WorkoutApp\\Backend\\Backend.csproj": {}
+    "C:\\Users\\alois\\OneDrive\\Documents\\GitHub\\WorkoutApp\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\Documents\\VisualStudioCodeProjects\\WorkoutApp\\Backend\\Backend.csproj": {
+    "C:\\Users\\alois\\OneDrive\\Documents\\GitHub\\WorkoutApp\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Documents\\VisualStudioCodeProjects\\WorkoutApp\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\alois\\OneDrive\\Documents\\GitHub\\WorkoutApp\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\LENOVO\\Documents\\VisualStudioCodeProjects\\WorkoutApp\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Documents\\VisualStudioCodeProjects\\WorkoutApp\\Backend\\obj\\",
+        "projectPath": "C:\\Users\\alois\\OneDrive\\Documents\\GitHub\\WorkoutApp\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\alois\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alois\\OneDrive\\Documents\\GitHub\\WorkoutApp\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\alois\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -46,6 +46,14 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.10, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
