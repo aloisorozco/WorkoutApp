@@ -1,4 +1,5 @@
 /node_modules
 Backend/bin
 Backend/obj
+Frontend/package-lock.json
 README.dev.MD
