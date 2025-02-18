@@ -13,13 +13,27 @@ import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app.routes';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { WorkoutTemplateComponent } from './pages/workout-template/workout-template.component';
+import { AddWorkoutTemplateComponent } from './pages/workout-template/add/add.component';
+import { DeleteWorkoutTemplateComponent } from './pages/workout-template/delete/delete.component';
+import { EditWorkoutTemplateComponent } from './pages/workout-template/edit/edit.component';
+import { AddWorkoutComponent } from './pages/workout/add/add.component';
+import { EditWorkoutComponent } from './pages/workout/edit/edit.component';
+import { DeleteWorkoutComponent } from './pages/workout/delete/delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    WorkoutTemplateComponent,
+    AddWorkoutTemplateComponent,
+    DeleteWorkoutTemplateComponent,
+    EditWorkoutTemplateComponent,
+    AddWorkoutComponent,
+    EditWorkoutComponent,
+    DeleteWorkoutComponent
   ],
   imports: [
     BrowserModule,
