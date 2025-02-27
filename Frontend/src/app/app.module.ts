@@ -21,6 +21,8 @@ import { AddWorkoutComponent } from './pages/workout/add/add.component';
 import { EditWorkoutComponent } from './pages/workout/edit/edit.component';
 import { DeleteWorkoutComponent } from './pages/workout/delete/delete.component';
 
+import { WorkoutTemplateService } from './services/workout-template.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +49,9 @@ import { DeleteWorkoutComponent } from './pages/workout/delete/delete.component'
     MatButtonModule,
     MatInputModule
   ],
-  providers: [],
+  providers: [
+    WorkoutTemplateService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
