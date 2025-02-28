@@ -3,14 +3,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import { HeaderComponent } from './components/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+
 import { AppRoutingModule } from './app.routes';
+
+import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { WorkoutTemplateComponent } from './pages/workout-template/workout-template.component';
@@ -41,6 +45,7 @@ import { WorkoutTemplateService } from './services/workout-template.service';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
     RouterModule,
     MatMenuModule,
     MatIconModule,

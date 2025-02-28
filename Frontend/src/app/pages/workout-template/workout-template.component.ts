@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { WorkoutTemplateService } from '../../services/workout-template.service';
+import { WorkoutTemplate } from '../../models/properties';
 
 @Component({
   selector: 'app-workout-template',
@@ -7,10 +8,17 @@ import { WorkoutTemplateService } from '../../services/workout-template.service'
   styleUrl: './workout-template.component.scss'
 })
 export class WorkoutTemplateComponent {
-  workoutTemplates: Object[];
+  workoutTemplates: WorkoutTemplate[] = [];
 
   constructor(private workoutTemplateService: WorkoutTemplateService) {
-    this.workoutTemplates = workoutTemplateService.getWorkoutTemplates();
+    workoutTemplateService.getWorkoutTemplates().subscribe(
+      (workoutTemplates) => {
+        console.log(JSON.stringify(workoutTemplates))
+        this.workoutTemplates = workoutTemplates
+      },
+      (error: any) => {
+        console.log(error)
+      }
+    );
   }
-
 }
