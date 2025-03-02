@@ -8,19 +8,30 @@ import { WorkoutTemplate } from '../models/properties';
 })
 export class WorkoutTemplateService {
 
-  private workoutTemplates: Object[] = [{
-    id: 123,
-    name: "upper 1",
-    exercises: [
-      "bench press",
-      "bicep curls"
-    ]
-  }];
+  private workoutTemplates: WorkoutTemplate[] = [];
+
   getWorkoutTemplates(): Observable<WorkoutTemplate[]> {
     return this.http.get<WorkoutTemplate[]>('/api/workoutTemplate');
   }
-  addWorkoutTemplate(newWorkoutTemplate: Object) {
+
+  addWorkoutTemplate(newWorkoutTemplate: WorkoutTemplate) {
+    this.http.post('/api/workoutTemplate', newWorkoutTemplate);
     this.workoutTemplates.push(newWorkoutTemplate);
+  }
+
+  editWorkoutTemplate(newWorkoutTemplate: WorkoutTemplate) {
+    this.http.patch('/api/workoutTemplate', newWorkoutTemplate);
+    this.workoutTemplates.map((workoutTemplate) => {
+      if (workoutTemplate.id === newWorkoutTemplate.id) {
+        return newWorkoutTemplate
+      }
+      return workoutTemplate
+    });
+  }
+
+  deleteWorkoutTemplate(workoutTemplateId: string) {
+    this.http.delete(`/api/workoutTemplate/${workoutTemplateId}`);
+    this.workoutTemplates = this.workoutTemplates.filter(workoutTemplate => workoutTemplate.id !== workoutTemplateId);
   }
 
   constructor(
