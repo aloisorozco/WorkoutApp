@@ -13,7 +13,6 @@ export class WorkoutTemplateComponent {
   constructor(private workoutTemplateService: WorkoutTemplateService) {
     workoutTemplateService.getWorkoutTemplates().subscribe(
       (workoutTemplates) => {
-        console.log(JSON.stringify(workoutTemplates))
         this.workoutTemplates = workoutTemplates
       },
       (error: any) => {

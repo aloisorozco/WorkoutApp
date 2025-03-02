@@ -1,5 +1,5 @@
 export interface WorkoutTemplate {
-    Id: string;
-    Name: number;
-    Exercises: string[];
-  }
+  id: string;
+  name: number;
+  exercises: string[];
+}

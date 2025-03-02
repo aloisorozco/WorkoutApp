@@ -1,1 +1,10 @@
-<p>{{workoutTemplates.length}}</p>
+<mat-accordion *ngFor="let workoutTemplate of workoutTemplates">
+    <mat-expansion-panel collapsedHeight="50px" expandedHeight="300px">
+        <mat-expansion-panel-header>
+            <mat-panel-title> {{workoutTemplate.name}} </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list *ngFor="let exercise of workoutTemplate.exercises">
+            <mat-list-item role="listitem">{{exercise}}</mat-list-item>
+        </mat-list>
+    </mat-expansion-panel>
+</mat-accordion>

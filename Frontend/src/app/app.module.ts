@@ -11,6 +11,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { AppRoutingModule } from './app.routes';
 
@@ -52,7 +54,9 @@ import { WorkoutTemplateService } from './services/workout-template.service';
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatListModule,
+    MatExpansionModule
   ],
   providers: [
     WorkoutTemplateService
