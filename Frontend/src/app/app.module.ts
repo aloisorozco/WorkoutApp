@@ -13,6 +13,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app.routes';
 
@@ -45,6 +47,7 @@ import { WorkoutTemplateService } from './services/workout-template.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule, ReactiveFormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
@@ -56,7 +59,8 @@ import { WorkoutTemplateService } from './services/workout-template.service';
     MatButtonModule,
     MatInputModule,
     MatListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDialogModule
   ],
   providers: [
     WorkoutTemplateService
