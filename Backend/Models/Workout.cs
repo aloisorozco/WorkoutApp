@@ -3,19 +3,18 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Backend.Models
 {
-    public class WorkoutTemplate
+    public class Workout
     {
 
         [BsonId]
         [BsonElement("Id"), BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 
-
         public string? UserId { get; set; }
 
         public string? Name { get; set; }
 
-        public List<string> Exercises { get; set; }
+        public DateTime Date { get; set; }
 
     }
 }

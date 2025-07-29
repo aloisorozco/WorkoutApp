@@ -1,6 +1,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 using Backend.Data;
+using Backend.Services;
 
 [assembly: ApiController]
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<MongoDbService>();
+builder.Services.AddSingleton<WorkoutTemplateService>();
+builder.Services.AddSingleton<WorkoutService>();
+builder.Services.AddSingleton<ExerciseService>();
 builder.Services.AddControllers();
 
 var app = builder.Build();

@@ -2,12 +2,14 @@ using MongoDB.Driver;
 
 namespace Backend.Data
 {
-    public class MongoDbService {
+    public class MongoDbService
+    {
 
         private readonly IConfiguration _configuration;
         private readonly IMongoDatabase? _database;
 
-        public MongoDbService(IConfiguration configuration) {
+        public MongoDbService(IConfiguration configuration)
+        {
             _configuration = configuration;
 
             var connectionString = _configuration.GetConnectionString("DbConnection");
