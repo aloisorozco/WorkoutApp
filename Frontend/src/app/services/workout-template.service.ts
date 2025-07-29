@@ -15,8 +15,8 @@ export class WorkoutTemplateService {
   }
 
   addWorkoutTemplate(newWorkoutTemplate: WorkoutTemplate) {
-    this.http.post('/api/workoutTemplate', newWorkoutTemplate);
-    this.workoutTemplates.push(newWorkoutTemplate);
+    console.log("hello : " + JSON.stringify(newWorkoutTemplate))
+    this.http.post('/api/workoutTemplate', newWorkoutTemplate).subscribe(() => this.workoutTemplates.push(newWorkoutTemplate));
   }
 
   editWorkoutTemplate(newWorkoutTemplate: WorkoutTemplate) {

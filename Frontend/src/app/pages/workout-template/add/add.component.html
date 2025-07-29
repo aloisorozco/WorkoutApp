@@ -1,7 +1,27 @@
 <mat-dialog-content class="mat-typography">
-    <h3>Add workout template</h3>
+    <h3>{{name || "Workout Template"}}</h3>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <p>
+            <mat-form-field>
+                <input type="text" matInput placeholder="Name" formControlName="name" [(ngModel)]="name">
+            </mat-form-field>
+        </p>
+        <div formArrayName="exercises">
+            <p *ngFor="let control of exercises.controls; index as i">
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Exercise {{i+1}}" [formControl]="getExercise(i)">
+                </mat-form-field>
+                <button type="button" (click)="removeExercise(i)">X</button>
+            </p>
+            <button type="button" (click)="addExercise()">+</button>
+
+            <p *ngIf="error" class="error">
+                {{ error }}
+            </p>
+        </div>
+        <div class="button">
+            <button mat-button mat-dialog-close>Cancel</button>
+            <button mat-button [mat-dialog-close]="true" cdkFocusInitial type="submit" mat-button>Add</button>
+        </div>
+    </form>
 </mat-dialog-content>
-<mat-dialog-actions>
-    <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Add</button>
-</mat-dialog-actions>

@@ -1,7 +1,9 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+
+import { MatDialog } from '@angular/material/dialog';
+
 import { WorkoutTemplateService } from '../../services/workout-template.service';
 import { WorkoutTemplate } from '../../models/properties';
-import { MatDialog } from '@angular/material/dialog';
 import { AddWorkoutTemplateComponent } from './add/add.component';
 
 @Component({
